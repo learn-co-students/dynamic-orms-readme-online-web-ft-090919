@@ -11,3 +11,8 @@ puts "song album: " + song.album
 song.save
 
 DB[:conn].execute("SELECT * FROM songs")
+
+threads = Song.new(name: "Threads", album: "This Will Destroy You")
+moral_coil = Song.new(name: "Mortal Coil", album: "Epitaph")
+
+puts threads.values_for_insert
